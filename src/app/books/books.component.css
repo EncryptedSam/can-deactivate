@@ -1,0 +1,10 @@
+.container{
+    border: 1px solid black;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container td, th{
+    border: 1px solid black;
+    padding: 5px;
+}
