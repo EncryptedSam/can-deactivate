@@ -1,12 +1,12 @@
 <h3>New Book</h3>
 
-<p *ngIf="isValidFormSubmitted" [ngClass]="'success'">
+<p *ngIf="isFormSubmitted" [ngClass]="'success'">
     Form Submitted Successfully
 </p>
 
 <form [formGroup]="bookForm" (ngSubmit)="onFormSubmitted()">
     Name:<br>
-    <input type="text" formControlName="name" (change)="onNameChange()">
+    <input type="text" formControlName="name" (keyup)="onNameChange()">
     <span *ngIf="name.errors && isValidFormSubmitted != null" [ngClass] ="'error'" >
         
         <span *ngIf="name.errors.required">Name Required</span>
