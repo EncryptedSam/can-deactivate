@@ -10,14 +10,14 @@
     <span *ngIf="name.errors && isValidFormSubmitted != null" [ngClass] ="'error'" >
         
         <span *ngIf="name.errors.required">Name Required</span>
-
+        
     </span><br>
     Price:<br>
     <input type="text" formControlName="price" (change)="onPriceChange()">
     <span *ngIf="price.errors && isValidFormSubmitted !=null" [ngClass] ="'error'" >
         
         <span *ngIf="price.errors.required">Price Required</span>
-        
+
     </span><br>
     <button type="submit">Add</button>
 </form>

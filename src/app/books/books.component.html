@@ -2,13 +2,16 @@
 <table class="container">
     <thead>
         <tr>
+            <th>Sl.No</th>
             <th>Name</th>
             <th>Price</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let b of bookList">
-            <td>{{b.name}}</td><td>{{b.price}}</td>
+        <tr *ngFor="let b of bookList; let i = index;">
+            <td>{{i+1}}</td>
+            <td>{{b.name}}</td>
+            <td>{{b.price}}</td>
         </tr>
     </tbody>
 </table>
