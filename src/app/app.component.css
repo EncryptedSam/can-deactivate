@@ -1,4 +1,18 @@
 .flex-box{
     display: flex;
     justify-content: space-between;
+    background-color: cadetblue;
+    padding: 5px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.flex-box a{
+    color: black;
+}
+
+.container{
+    background-color: aquamarine;
+    padding: 5px;
+
+    border-radius: 0px 0px 5px 5px;
 }

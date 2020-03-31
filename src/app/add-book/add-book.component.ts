@@ -11,7 +11,7 @@ import { CanComponentDeactivate } from '../can-deactivate.service';
 })
 export class AddBookComponent implements OnInit, CanComponentDeactivate {
 
-  constructor(private bookStore:BookStoreService) { }
+  constructor(private bookStoreService:BookStoreService) { }
 
   newBook:Book;
   canNavigate:boolean = true;
@@ -31,7 +31,7 @@ export class AddBookComponent implements OnInit, CanComponentDeactivate {
     this.isValidFormSubmitted = true;
     this.canNavigate = true;
 
-    this.bookStore.addBook(new Book(this.name.value, this.price.value));
+    this.bookStoreService.addBook(new Book(this.name.value, this.price.value));
     this.bookForm.reset();
   }
 
